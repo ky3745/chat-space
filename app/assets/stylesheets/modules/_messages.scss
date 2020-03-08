@@ -1,3 +1,5 @@
+@import "config/variable";
+
 * {
   box-sizing: border-box;
 }
@@ -11,8 +13,8 @@
   background-color: #253141;
   width: 300px;
   &__side-header {
-    color: #ffffff;
-    font-size: 16px;
+    color: $mainWhiteColor;
+    font-size: $fontSizeLarge;
     height: 100px;
     display: flex;
     align-items: center;
@@ -30,7 +32,7 @@
         text-align: right;
         a {
           text-decoration: none;
-          color: #ffffff
+          color: $mainWhiteColor;
         }
         .new-group{
           &__btn{
@@ -47,19 +49,19 @@
       &__group-name {
         padding: 20px 20px 5px;
         font-size: 15px;
-        color: #ffffff;
+        color: $mainWhiteColor;
       }
       &__group-message {
         padding: 0px 20px 40px;
         font-size: 11px;
-        color: #ffffff;
+        color: $mainWhiteColor;
       }
     }
   }
 }
 
 .chat-main {
-  background-color: #ffffff;
+  background-color: $mainWhiteColor;
   width: calc(100vw - 300px);
   &__group-info {
     height: 100px;
@@ -74,17 +76,17 @@
         padding-top: 35px;
       }
       .member-list {
-        color: #999999;
-        font-size: 12px;
+        color: $mainGrayColor;
+        font-size: $fontSizeSmall;
         padding-top: 15px;
         display: flex;
         list-style: none;
       }
     }
     .edit-group__btn {
-      font-size: 16px;
-      border: 1px solid #38aef0;
-      color: #38aef0;
+      font-size: $fontSizeLarge;
+      border: 1px solid $mainBlueColor;
+      color: $mainBlueColor;
       height: 40px;
       width: 72px;
       padding: 0 20px;
@@ -105,11 +107,11 @@
           &__talker {
             color: #333333;
             font-weight: bold;
-            font-size: 16px;
+            font-size: $fontSizeLarge;
           }
           &__date {
-            color: #999999;
-            font-size: 12px;
+            color: $mainGrayColor;
+            font-size: $fontSizeSmall;
             padding-left: 10px;
           }
         }
@@ -131,7 +133,7 @@
           width: 100%;
           position: relative;
           &__text{
-            font-size: 16px;
+            font-size: $fontSizeLarge;
             height: 50px;
             width: 100%;
             padding: 0 40px 0 10px;
@@ -154,8 +156,8 @@
           height: 50px;
           padding: 0 30px;
           margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
+          background-color: $mainBlueColor;
+          color: $mainWhiteColor;
           cursor: pointer;
         }
       }
