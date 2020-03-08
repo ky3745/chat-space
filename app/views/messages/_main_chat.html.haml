@@ -28,8 +28,8 @@
   .chat-main__message-form
     %form.new-message
       .input-box
-        %input.input-box__text{:placeholder => "type a message", :type => "text"}
+        %input.input-box__text{placeholder: "type a message", type: "text"}
         %label.input-box__image
           = icon('fas', 'image')
-          %input.input-box__image__file{:name => "message[image]",:type => "file"}
-      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}
+          %input.input-box__image__file{name: "message[image]",type: "file"}
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}
