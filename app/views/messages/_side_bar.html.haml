@@ -4,19 +4,16 @@
       .side-bar__side-header__user-box__user-name
         = current_user.name
       .side-bar__side-header__user-box__icon
-        = link_to "#", class: "new-group__btn" do
+        = link_to new_group_path, class: "new-group__btn" do
           %i.far.fa-edit
           %span<>
         = link_to edit_user_path(current_user), class: "edit-user__btn" do
           %i.fas.fa-cog
   %ul.group-list
-    %li.group
-      %p.group__group-name
-        techcamp1
-      %p.group__group-message
-        まだメッセージがありません
-    %li.group
-      %p.group__group-name
-        techcamp2
-      %p.group__group-message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      %li.group
+        = link_to '#' do
+          %p.group__group-name
+            = group.name
+          %p.group__group-message
+            まだメッセージがありません
