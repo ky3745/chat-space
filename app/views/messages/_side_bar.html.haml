@@ -2,12 +2,12 @@
   .side-bar__side-header
     .side-bar__side-header__user-box
       .side-bar__side-header__user-box__user-name
-        yama
+        = current_user.name
       .side-bar__side-header__user-box__icon
         = link_to "#", class: "new-group__btn" do
           %i.far.fa-edit
           %span<>
-        = link_to "#", class: "edit-user__btn" do
+        = link_to edit_user_path(current_user), class: "edit-user__btn" do
           %i.fas.fa-cog
   %ul.group-list
     %li.group
